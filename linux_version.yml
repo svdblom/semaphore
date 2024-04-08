@@ -1,15 +1,11 @@
 ---
-
-- name: Network Getting Started First Playbook
-  connection: ansible.netcommon.network_cli
-  gather_facts: false
-  hosts: servers
+- hosts: servers
+  gather_facts: yes
+  become: false
   tasks:
-
-    - name: Get config for VyOS devices
-      vyos.vyos.vyos_facts:
-        gather_subset: all
-
-    - name: Display the config
-      debug:
-        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
+  - name: Distribution
+    debug: msg="{{ ansible_distribution }}"
+  - name: Distribution version
+    debug: msg="{{ ansible_distribution_version}}"
+  - name: Distribution major version
+    debug: msg="{{ ansible_distribution_major_version }}"
