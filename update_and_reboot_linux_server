@@ -1,7 +1,6 @@
 ---
 - hosts: servers
   gather_facts: yes
-  sudo: yes
   become: yes
 
   tasks:
