@@ -1,7 +1,9 @@
 ---
-- hosts: servers
-  gather_facts: yes
-  become: false
+- hosts: all
+  gather_facts: False
   tasks:
-  - name: Distribution
-    debug: msg="{{ ansible_distribution }} {{ ansible_distribution_version}}"
+    - name: Check Dist Version
+      shell: cat /etc/os-release
+      register: response
+
+    - debug: msg="{{ response.stdout }}"
