@@ -2,7 +2,6 @@
 - hosts: servers
   gather_facts: yes
   become: yes
-  become_user: cloudadmin
 
   tasks:
     - name: Update and upgrade apt packages
