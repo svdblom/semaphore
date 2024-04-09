@@ -2,9 +2,6 @@
 - hosts: servers
   gather_facts: yes
   become: true
-  become_method: sudo
-  become_user: root
-
 
   tasks:
     - name: Update and upgrade apt packages
