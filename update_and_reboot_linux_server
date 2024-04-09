@@ -8,7 +8,7 @@
     - name: Check the effective user ID
       ansible.bulitin.assert:
         that:
-          - ansible_effective_user_id == 0
+      - ansible_effective_user_id == 0
 
     - name: Update and upgrade apt packages
       apt:
