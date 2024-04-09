@@ -2,7 +2,7 @@
 - hosts: servers
   gather_facts: yes
   become: true
-  become_method: enable
+  become_method: sudo
   become_user: root
 
 
