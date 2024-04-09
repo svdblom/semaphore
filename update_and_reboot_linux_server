@@ -2,7 +2,7 @@
 - hosts: servers
   gather_facts: yes
   become: yes
-  become_user: sudo
+  become_user: root
 
   tasks:
     - name: Update and upgrade apt packages
