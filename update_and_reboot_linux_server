@@ -7,7 +7,7 @@
     - name: Update and upgrade apt packages
       apt:
         update_cache: yes
-        force_apt_get=yes
+        force_apt_get:yes
         upgrade: yes
         state:latest 
         cache_valid_time:3600
