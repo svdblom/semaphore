@@ -17,5 +17,5 @@
         path: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
         mode: '0777'
 
-    - name: Start installatie NVIDIA GRID driver
+    - name: Start installatie NVIDIA GRID driver (unattended = -q -a -n -X -s)
       action: shell sudo /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run -q -a -n -X -s
