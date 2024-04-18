@@ -1,0 +1,8 @@
+---
+- hosts: servers
+  gather_facts: yes
+  become: true
+
+  tasks:
+    - name: Maak tijdelijke map aan in tmp
+      action: shell sudo mkdir -p /tmp/nvidia-grid/ && cd /tmp/nvidia-grid/
