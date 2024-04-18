@@ -11,3 +11,4 @@
       ansible.builtin.get_url:
       url: http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
       dest: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
+      force_basic_auth: yes
