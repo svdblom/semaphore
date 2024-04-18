@@ -8,4 +8,6 @@
       action: shell sudo mkdir -p /tmp/nvidia-grid/ && cd /tmp/nvidia-grid/
 
     - name: Download .run bestand van RCBEHEER1001
-      action: shell sudo wget http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
+      ansible.builtin.get_url:
+      url: http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
+      dest: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
