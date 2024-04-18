@@ -12,7 +12,10 @@
         url: http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
         dest: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
 
-    - name: Change file ownership, group and permissions
+    - name: Wijzig bestand om uit te mogen voeren
       ansible.builtin.file:
         path: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
         mode: '0777'
+
+    - name: Start installatie NVIDIA GRID driver
+      action: shell sudo /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
