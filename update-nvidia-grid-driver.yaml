@@ -11,3 +11,8 @@
       ansible.builtin.get_url:
         url: http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
         dest: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
+
+    - name: Change file ownership, group and permissions
+      ansible.builtin.file:
+        path: /tmp/nvidia-grid/NVIDIA-Linux-x86_64-535.161.08-grid.run
+        mode: '0777'
