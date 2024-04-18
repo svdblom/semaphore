@@ -5,9 +5,7 @@
 
   tasks:
     - name: Maak tijdelijke map aan in tmp
-      sudo: true
-      action: shell mkdir -p /tmp/nvidia-grid/ && cd /tmp/nvidia-grid/
+      action: shell sudo mkdir -p /tmp/nvidia-grid/ && cd /tmp/nvidia-grid/
 
     - name: Download .run bestand van RCBEHEER1001
-      sudo: true
-      action: shell wget http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
+      action: shell sudo wget http://rcbeheer1001/nvidia/NVIDIA-Linux-x86_64-535.161.08-grid.run
